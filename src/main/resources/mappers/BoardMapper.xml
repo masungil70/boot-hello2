@@ -30,7 +30,7 @@ ENGINE=InnoDB
     </sql>
 
 
-    <select id="getList" resultType="BoardVO">
+    <select id="getList" resultType="org.kosa.hello.entity.BoardVO">
 		select 
 			b.*, m.member_name bwriter  
 		from tb_board b inner join tb_member m on b.member_id = m.member_id
@@ -45,7 +45,7 @@ ENGINE=InnoDB
 		<include refid="search"/>
     </select>
     
-	<select id="view" resultType="BoardVO">
+	<select id="view" resultType="org.kosa.hello.entity.BoardVO">
 		select 
 			b.*, m.member_name bwriter  
 		from tb_board b inner join tb_member m on b.member_id = m.member_id  
